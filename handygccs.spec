@@ -54,13 +54,13 @@ fi
 
 
 %files
-/usr/bin/handycon
+%{_bindir}/handycon
 %{python3_sitelib}/%{_servicename}
 %{python3_sitelib}/%{_servicename}-2.0.0.dist-info
-/usr/lib/systemd/system/handycon.service
-/usr/lib/udev/hwdb.d/59-handygccs-ayaneo.hwdb
-/usr/lib/udev/rules.d/60-handycon.rules
-/usr/share/handygccs/scripts/capture-system.py
-/usr/lib/udev/hwdb.d
-/usr/share/handygccs
-/usr/share/handygccs/scripts
+%{_prefix}/lib/systemd/system/handycon.service
+%{_prefix}/lib/udev/hwdb.d/59-handygccs-ayaneo.hwdb
+%{_prefix}/lib/udev/rules.d/60-handycon.rules
+%{_datadir}/handygccs/scripts/capture-system.py
+%dir %{_prefix}/lib/udev/hwdb.d
+%dir %{_datadir}/handygccs
+%dir %{_datadir}/handygccs/scripts

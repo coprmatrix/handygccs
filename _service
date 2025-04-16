@@ -1,5 +1,5 @@
 <services>
-  <service name="tar_scm">
+  <service name="obs_scm">
     <param name="url">https://github.com/TobiPeterG/HandyGCCS.git</param>
     <param name="scm">git</param>
     <param name="versionformat">@PARENT_TAG@.@TAG_OFFSET@</param>
@@ -8,10 +8,11 @@
     <param name="changesgenerate">enable</param>
     <param name="versionrewrite-pattern">v(.*)</param>
   </service>
-  <service name="recompress">
+  <service name="tar" mode="buildtime"/>
+  <service name="recompress" mode="buildtime">
     <param name="file">*.tar</param>
     <param name="compression">xz</param>
   </service>
-  <service name="set_version">
+  <service name="set_version" mode="buildtime">
   </service>
 </services>

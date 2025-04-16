@@ -9,6 +9,8 @@ URL:            https://github.com/ShadowBlip/%{name}
 Source:         %{name}-%{version}.tar.xz
 Patch0:         0001-fedora.patch
 
+%define python_module() python3-%{1}
+
 BuildArch:      noarch
 Requires:       systemd
 Requires:       udev
